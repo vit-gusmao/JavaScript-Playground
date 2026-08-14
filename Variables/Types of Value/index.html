@@ -57,15 +57,22 @@
                 <article class="card" id="boolean">
                     <h3>Boolean</h3>
                     <p>
-                        A <span class="keyword">boolean</span> represents a logical value and can only be <strong>true</strong> or <strong>false</strong>.
+                        A <span class="keyword">boolean</span> represents a logical value and can only be <span style="color: yellow;">true</span> or <span style="color: yellow;">false</span>.<br>
+                        <br>
+                        anything that has a value is considered <span style="color: yellow;">true</span>, while anything that is null is considered <span style="color: yellow;">false</span>.
+                   
                     </p>
                     <h4>Example:</h4>
                     <div class="code-block">
                         let isLoggedIn = true;<br>
                         let isAdult = false;<br>
+                        let productsLeft = 0;<br>
+                        let productList = 1;<br>
                         <br>
                         console.log(isLoggedIn); // true<br>
-                        console.log(isAdult); // false
+                        console.log(isAdult); // false<br>
+                        console.log(productsLeft); // false<br>
+                        console.log(productList); // true
                     </div>
                 </article>
 

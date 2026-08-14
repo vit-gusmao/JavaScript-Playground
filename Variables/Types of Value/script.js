@@ -14,9 +14,13 @@ console.log(num); // 20000000000
 // Boolean Example
 let isLoggedIn = true;
 let isAdult = false;
+let productsLeft = 0;
+let productList = 1;
 
 console.log(isLoggedIn); // true
 console.log(isAdult); // false
+console.log(productsLeft); //false 
+console.log(productList);  //true
 
 // Undefined Example
 let result;
