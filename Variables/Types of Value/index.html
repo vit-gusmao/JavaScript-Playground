@@ -12,12 +12,14 @@
 </head>
 <body>
     <main class="container">
-            <h1>Values</h1>
+        <h1>Values</h1>
         <hr>
         <section class="content-section">
             <h2>What are values ?</h2>
-            <p>Values are the kinds of data that variables can hold, like the "content" inside the box, each variable can store a value of one of these types.<br> 
-            The type of value determines what you can do with that variable in your code.</p>
+            <p>
+                Values are the kinds of data that variables can hold, like the "content" inside the box, each variable can store a value of one of these types.<br>
+                The type of value determines what you can do with that variable in your code.
+            </p>
             <hr>
 
             <h2>types of Values</h2>
@@ -25,59 +27,98 @@
             <div class="cards-grid">
                 <article class="card" id="string">
                     <h3>String</h3>
-                    <p>A <span class="keyword">string</span> is a sequence of characters, usually used to represent text values.</p>
+                    <p>
+                        A <span class="keyword">string</span> is a sequence of characters, usually used to represent text values.
+                    </p>
                     <h4>Example:</h4>
-                    <div class="code-block">let name = "Maria";<br>let greeting = 'Hello, world!';<br>console.log(name); // Maria</div>
+                    <div class="code-block">
+                        let name = "Maria";<br>
+                        console.log("Welcome, ${name}"); // Welcome, Maria
+                    </div>
                 </article>
 
                 <article class="card" id="number">
                     <h3>Number</h3>
-                    <p>A <span class="keyword">number</span> is a numeric value, which can be an integer or a decimal (floating point).</p>
+                    <p>
+                        A <span class="keyword">number</span> is a numeric value, which can be an integer or a decimal (floating point).
+                    </p>
                     <h4>Example:</h4>
-                    <div class="code-block">let age = 25;<br>let price = 9.99;<br>console.log(age + price); // 34.99</div>
+                    <div class="code-block">
+                        let age = 25;<br>
+                        let price = 9.99;<br>
+                        
+                        console.log(age + price); // 34.99
+                    </div>
                 </article>
 
                 <article class="card" id="boolean">
                     <h3>Boolean</h3>
-                    <p>A <span class="keyword">boolean</span> represents a logical value and can only be <strong>true</strong> or <strong>false</strong>.</p>
+                    <p>
+                        A <span class="keyword">boolean</span> represents a logical value and can only be <strong>true</strong> or <strong>false</strong>.
+                    </p>
                     <h4>Example:</h4>
-                    <div class="code-block">let isLoggedIn = true;<br>let isAdult = false;<br>console.log(isLoggedIn); // true</div>
+                    <div class="code-block">
+                        let isLoggedIn = true;<br>
+                        let isAdult = false;<br>
+                        console.log(isLoggedIn); // true
+                    </div>
                 </article>
 
                 <article class="card" id="undefined">
                     <h3>Undefined</h3>
-                    <p><span class="keyword">undefined</span> means a variable has been declared but has not yet been assigned any value.</p>
+                    <p>
+                        <span class="keyword">undefined</span> means a variable has been declared but has not yet been assigned any value.
+                    </p>
                     <h4>Example:</h4>
-                    <div class="code-block">let result;<br>console.log(result); // undefined</div>
+                    <div class="code-block">
+                        let result;<br>
+                        console.log(result); // undefined
+                    </div>
                 </article>
             </div>
             <hr>
 
             <h2 id="naming">How to declare variables ?</h2>
-            <p>A variable name can only start with a <span class="keyword">letter</span>, <span class="keyword">$</span>, or <span class="keyword">_</span><br> 
-                It cannot start with a number and cannot contain special characters.</p>
-
+            <p>
+                A variable name can only start with a <span class="keyword">letter</span>, <span class="keyword">$</span>, or <span class="keyword">_</span><br>
+                It cannot start with a number and cannot contain special characters.
+            </p>
+            
             <div class="cards-grid">
                 <div class="card">
                     <h4>✅ Valid names</h4>
-                    <div class="code-block">let myVar = 'valid';<br>let _private = 123;<br>let $jquery = {};<br>let first_name = 'John';
+                    <div class="code-block">
+                        let myVar = 'valid';<br>
+                        let _private = 123;<br>
+                        let $jquery = {};<br>
+                        let first_name = 'John';
                     </div>
                 </div>
 
                 <div class="card">
                     <h4>❌ Invalid names</h4>
-                    <div class="code-block">let 1stVar = 'invalid';<br>let my-var = 123;<br>let my var = 'space';<br>let class = {};
+                    <div class="code-block">
+                        let 1stVar = 'invalid';<br>
+                        let my-var = 123;<br>
+                        let my var = 'space';<br>
+                        let class = {};
                     </div>
                 </div>
             </div>
             <hr>
 
             <h2 id="camelcase">CamelCase convention</h2>
-            <p>The best way to declare a variable is to use the <span class="keyword">camelCase convention</span>, where the first word is in lowercase and each following word starts with a capital letter, without spaces or underscores.</p>
+            <p>
+                The best way to declare a variable is to use the <span class="keyword">camelCase convention</span>, where the first word is in lowercase and each following word starts with a capital letter, without spaces or underscores.
+            </p>
 
             <div class="card">
                 <h4>✨ Example:</h4>
-                <div class="code-block">let helloWorld = "Hello World!";<br>let firstName = "John";<br>let isUserLoggedIn = true;<br>let getUserData = () => { ... };
+                <div class="code-block">
+                    let helloWorld = "Hello World!";<br>
+                    let firstName = "John";<br>
+                    let isUserLoggedIn = true;<br>
+                    let getUserData = () => { ... };
                 </div>
             </div>
             <hr>
