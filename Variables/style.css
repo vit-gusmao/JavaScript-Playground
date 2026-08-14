@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    color: white;
+    font-size: 20px;
 }
 
 h1 {
@@ -7,6 +9,15 @@ h1 {
     color: yellow;
 }
 
-h2 {
+h2, h3, .yellow {
     color: yellow;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 23px;
+    line-height: 1.6;
 }
