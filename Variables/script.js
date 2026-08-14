@@ -1,1 +1,0 @@
-let frase = "Essa é uma frase qualquer"
