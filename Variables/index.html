@@ -2,45 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
     <title>Variables</title>
 </head>
 <body>
-    <header>
-    <h1>Variables</h1>
-    <hr>
-    </header>
-    <main>
-        <h2>What is variables ?</h2>
-        <p>Variables are designed to store values in memory.</p>
+    <main class="container">
+            <h1>Variables</h1>
         <hr>
+        <section class="content-section">
+            <h2>What are variables?</h2>
+            <p>Variables are designed to store values in memory. They work like "boxes" that store information which can be used later in the code.</p>
+            <hr>
 
-        <h2>There are 2 types of variables, "let" and "const"</h2>
+            <h2>Two types of variables</h2>
 
-        <h3>let</h3>
-        <p><span class = "yellow">let</span> is a variable wich can be redeclared and assigned any time</p>
-        <h4>Example:</h4>
-        <p>let number = 3;<br>
-        number = 4;<br>
-        alert(number)<br>
-        <br>
-        it will show "4" in the alert</p>
+            <div class="cards-grid">
+                <article class="card" id="let">
+                    <h3>let</h3>
+                    <p><span class="keyword">let</span> is a variable that can be redeclared and reassigned at any time.</p>
+                    <h4>Reassignment example:</h4>
+                    <div class="code-block">let number = 3;<br>number = 4;<br>alert(number);<br><br>// Shows "4" in the alert
+                    </div>
+                </article>
 
-        <h3>const</h3>
-        <p><span class = "yellow">const</span> is a variable wich can only be declared once, always being the assigned value, it can't be redeclared</p>
-        <hr>
+                <article class="card" id="const">
+                    <h3>const</h3>
+                    <p><span class="keyword">const</span> is a constant that can be declared only once. Its value cannot be reassigned.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">const PI = 3.14;<br>// PI = 3.15;  // ❌ Error!<br><br>console.log(PI); // 3.14
+                    </div>
+                </article>
+            </div>
+            <hr>
 
-        <h2>How to declare variables?</h2>
-        <p>A variable name can only start with a <span class="yellow">letter</span>, <span class="yellow">$</span>, or <span class="yellow">_</span><br>
-            It cannot start with a number and cannot contain special characters.</p>
-         
-        <h2>camelCase pattern</h2>
-        <p>The best way to declare a variable is using the <span class="yellow">camelCasenaming convention</span>, where the first word is in <span class="yellow">lowercase</span> and each following word starts with a <span class="yellow">capital letter</span>, with no <span class="yellow">spaces</span> or <span class="yellow">underscores</span>.<\p>
-        <h3><span class = "yellow">Example:</span></h3>
-        <p> let helloWorld = "Hello World!";</p>
-        <hr>
+            <h2 id="naming">How to declare variables ?</h2>
+            <p>A variable name can only start with a <span class="keyword">letter</span>, <span class="keyword">$</span>, or <span class="keyword">_</span><br> 
+                It cannot start with a number and cannot contain special characters.</p>
 
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>✅ Valid names</h4>
+                    <div class="code-block">let myVar = 'valid';<br>let _private = 123;<br>let $jquery = {};<br>let first_name = 'John';
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>❌ Invalid names</h4>
+                    <div class="code-block">let 1stVar = 'invalid';<br>let my-var = 123;<br>let my var = 'space';<br>let class = {};
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <h2 id="camelcase">CamelCase convention</h2>
+            <p>The best way to declare a variable is to use the <span class="keyword">camelCase convention</span>, where the first word is in lowercase and each following word starts with a capital letter, without spaces or underscores.</p>
+
+            <div class="card">
+                <h4>✨ Example:</h4>
+                <div class="code-block">let helloWorld = "Hello World!";<br>let firstName = "John";<br>let isUserLoggedIn = true;<br>let getUserData = () => { ... };
+                </div>
+            </div>
+            <hr>
+        </section>
     </main>
 </body>
 </html>
