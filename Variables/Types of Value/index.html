@@ -33,6 +33,7 @@
                     <h4>Example:</h4>
                     <div class="code-block">
                         let name = "Maria";<br>
+                        <br>
                         console.log("Welcome, ${name}"); // Welcome, Maria
                     </div>
                 </article>
@@ -46,8 +47,10 @@
                     <div class="code-block">
                         let age = 25;<br>
                         let price = 9.99;<br>
-
-                        console.log(age + price); // 34.99
+                        let num = 2e10;
+                        <br><br>
+                        console.log(age + price); // 34.99<br>
+                        console.log(num); // 20000000000
                     </div>
                 </article>
 
@@ -60,7 +63,9 @@
                     <div class="code-block">
                         let isLoggedIn = true;<br>
                         let isAdult = false;<br>
-                        console.log(isLoggedIn); // true
+                        <br>
+                        console.log(isLoggedIn); // true<br>
+                        console.log(isAdult); // false
                     </div>
                 </article>
 
@@ -72,10 +77,42 @@
                     <h4>Example:</h4>
                     <div class="code-block">
                         let result;<br>
+                        <br>
                         console.log(result); // undefined
                     </div>
                 </article>
+
+                <article class="card" id="null">
+                    <h3>Null</h3>
+                    <p>
+                        <span class="keyword">null</span> is a special value that represents the intentional absence of any object value. It is often used to indicate that a variable should be empty, or has no value on purpose.
+                    </p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        shoppingCartPrice  = null;<br>
+                        console.log(shoppingCartPrice); // null
+                    </div>
+                </article>
             </div>
+            <hr>
+
+            <h2>Typeof</h2>
+            <p>
+                The <span style="color: yellow;">typeof</span> operator in JavaScript is used to find out the type of a value or variable. It returns a string indicating the type, such as "string", "number", "boolean", "undefined", etc.
+                <article class="card" id="typeof-example">
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        let age = 30;<br>
+                        let name = "Anna";<br>
+                        let isStudent = false;<br>
+                        <br>
+                        console.log(typeof age); // "number"<br>
+                        console.log(typeof name); // "string"<br>
+                        console.log(typeof isStudent); // "boolean"
+                    </div>
+                </article>
+     
+            </p>
             <hr>
         </section>
     </main>

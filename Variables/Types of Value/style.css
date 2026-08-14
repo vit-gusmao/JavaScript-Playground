@@ -122,8 +122,23 @@ p {
   margin-bottom: 10px;
 }
 
+.card h3 {
+  margin-bottom: var(--space-md);
+}
+
 .card p {
   font-size: 16px;
+  line-height: 1.6;
+}
+
+.card h4 {
+  margin-top: var(--space-md);
+}
+
+#null {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .cards-grid {
