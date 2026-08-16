@@ -4,7 +4,7 @@ function welcoming(){
     
     welcome(); // "welcome"
 
-    function caller(message, name){
+    function caller(message, name) {
         console.log(message, name);
         }
         
