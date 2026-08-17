@@ -12,7 +12,7 @@ function callerNick(nickname) {
 
 const calling = {
     showMessage: function() {
-    console.log("Hello");
+        return "Hello";
         }
     }
     
@@ -24,4 +24,4 @@ caller("Good Night", "Zoe"); // Good Night Zoe
 
 console.log(callerNick("André")); // Welcome, André
 
-calling.showMessage(); // Hello
+console.log(calling.showMessage()); // Hello

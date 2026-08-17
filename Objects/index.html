@@ -37,14 +37,18 @@
                 <h3>Example:</h3>
                 <div class="code-block">
                 <p>
-                    const João = {<br>
+                    const Joao = {<br>
                         completeName: "João Rodrigo da Silva", <br>
-                        Age: 15, <br>
-                        showMessage:
+                        age: 15, <br>
+                        showMessage: function() {<br>
+                           return "Welcome";
+                        },<br>
+                        city: "Berlim"
 
                     }
                     <br><br>
-                    welcoming(); // "welcome"
+                    console.log(Joao.completeName); // João Rodrigo da Silva <br>
+                    console.log(Joao.showMessage()); // Welcome 
                 </p>
                 </div>
             </article>

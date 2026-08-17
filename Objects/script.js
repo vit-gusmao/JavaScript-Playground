@@ -1,20 +1,11 @@
-function welcome() {
-    console.log("Welcome");
-}
-
-function caller(message, name) {
-    console.log(`${message} ${name}`);
-}
-
-function callerNick(nickname) {
-    return `Welcome, ${nickname}`;
-}
-
-// Example usages:
-welcome(); // "Welcome"
-
-caller("Hello", "André"); // Hello André 
-caller("Good Morning", "Paulo"); // Good Morning Paulo 
-caller("Good Night", "Zoe"); // Good Night Zoe
-
-console.log(callerNick("André")); // Welcome, André
+const Joao = {
+    completeName: "João Rodrigo da Silva",
+    age: 15,
+    showMessage: function() {
+        return "Welcome";
+    },
+    city: "Berlim" 
+   }
+    
+    console.log(Joao.completeName); // João Rodrigo da Silva
+    console.log(Joao.showMessage()); // Welcome
