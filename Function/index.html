@@ -37,7 +37,7 @@
                  <span>Functions</span> can have <span>paramaters</span> and <span>returns</span>.
             </p>
             <div class="cards-grid">
-                <article class="card" id="let">
+                <article class="card" id="parameter">
                     <h3>parameter</h3>
                     <p><span class="keyword">parameter</span> is a variable value inside of the function where you can pass it for change his value.</p>
                     <h4>example:</h4>
@@ -46,12 +46,29 @@
                             console.log(message, name);<br>
                         }<br>
                     <br>
-                    caller("Hello", "André"); // Hello André
-                    caller("Good Morning", "Paulo"); // Good Morning Paulo
+                    caller("Hello", "André"); // Hello André<br>
+                    caller("Good Morning", "Paulo"); // Good Morning Paulo<br>
                     caller("Good Night", "Zoe"); // Good Night Zoe
                 </p>
                     </div>
                 </article>
+
+                <article class="card" id="number">
+                    <h3>Return</h3>
+                    <p>
+                        A <span class="keyword">return</span> is used to return something in the <span>function</span>, codes after the return wont be readed.
+                    </p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>function callerNick(nickname){<br>
+                           return "Welcome, ${nickname}";<br>
+                        }<br>
+                    <br>
+                        console.log(callerNick("André")); // Welcome, André
+                </p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 </body>

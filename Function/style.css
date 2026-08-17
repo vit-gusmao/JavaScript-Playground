@@ -183,7 +183,13 @@ p {
   -webkit-overflow-scrolling: touch;
   margin: var(--space-lg) 0;
   max-width: 100%;
-  word-break: break-word;
+  white-space: nowrap;
+}
+
+.code-block p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 @keyframes slideInUp {
