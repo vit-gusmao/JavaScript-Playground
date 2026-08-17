@@ -10,12 +10,7 @@ function callerNick(nickname) {
     return `Welcome, ${nickname}`;
 }
 
-const calling = {
-    showMessage: function() {
-    console.log("Hello");
-        }
-    }
-    
+// Example usages:
 welcome(); // "Welcome"
 
 caller("Hello", "André"); // Hello André 
@@ -23,5 +18,3 @@ caller("Good Morning", "Paulo"); // Good Morning Paulo
 caller("Good Night", "Zoe"); // Good Night Zoe
 
 console.log(callerNick("André")); // Welcome, André
-
-calling.showMessage(); // Hello
