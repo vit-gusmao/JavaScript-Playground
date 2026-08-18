@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Logic operators</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Logic operators</h1>
+        <hr>
+        <section class="content-section">
+            <h2>What are logic operators ?</h2>
+            <p>
+                <span>Logic operators</span> combine conditions and return <span>true</span> or <span>false</span>.
+            </p>
+            <hr>
+
+            <div class="cards-grid">
+                <article class="card" id="and">
+                    <h3>AND (&&)</h3>
+                    <p><span class="keyword">&&</span> is true only when both conditions are true.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let a = 10;<br>
+                            let b = 3;<br>
+                            <br>
+                            console.log((a > 0) && (b > 0)); // true
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="or">
+                    <h3>OR (||)</h3>
+                    <p><span class="keyword">||</span> is true when at least one condition is true.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let a = 10;<br>
+                            let b = 3;<br>
+                            <br>
+                            console.log((a > 0) || (b > 0)); // true
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="not">
+                    <h3>NOT (!)</h3>
+                    <p><span class="keyword">!</span> inverts the result: true becomes false, and false becomes true.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let a = 10;<br>
+                            <br>
+                            console.log(!(a > 0)); // false
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <hr>
+        </section>
+    </main>
+</body>
+</html>
