@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>If Else</title>
+</head>
+<body>
+    <main class="container">
+        <h1>If Else</h1>
+        <hr>
+        <section class="content-section">
+            <h2>What are if else ?</h2>
+            <p>
+                <span>if else</span> are used to make decisions in the program.
+                The <span>if</span> checks a condition.
+                The <span>else</span> runs when the <span>if</span> condition is false.
+                <span>else if</span> is used to add more conditions (in Python this is <span>elif</span>).<br>
+                The order is always: <span>if</span>, then <span>else if</span>, then <span>else</span>.
+            </p>
+            <hr>
+
+            <div class="cards-grid">
+                <article class="card" id="if">
+                    <h3>if</h3>
+                    <p><span class="keyword">if</span> runs the code only when the condition is true.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let choice = 1;<br>
+                            <br>
+                            if (choice == 1) {<br>
+                                console.log("you chose 1");<br>
+                            }<br>
+                            // you chose 1
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="else-if">
+                    <h3>else if</h3>
+                    <p><span class="keyword">else if</span> checks another condition when the first <span>if</span> is false.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let choice = 2;<br>
+                            <br>
+                            if (choice == 1) {<br>
+                                console.log("you chose 1");<br>
+                            } else if (choice == 2) {<br>
+                                console.log("you chose 2");<br>
+                            }<br>
+                            // you chose 2
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="else">
+                    <h3>else</h3>
+                    <p><span class="keyword">else</span> runs when every condition above is false.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let choice = 3;<br>
+                            <br>
+                            if (choice == 1) {<br>
+                                console.log("you chose 1");<br>
+                            } else if (choice == 2) {<br>
+                                console.log("you chose 2");<br>
+                            } else {<br>
+                                console.log("you chose 3");<br>
+                            }<br>
+                            // you chose 3
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <hr>
+
+            <h2>Nested if</h2>
+            <p>
+                A <span>nested if</span> checks a main condition and, only if it is true, checks another more specific condition inside it.
+            </p>
+            <article class="card" id="nested">
+                <h3>Example:</h3>
+                <div class="code-block">
+                    <p>
+                        let age = 65;<br>
+                        <br>
+                        if (age >= 18) {<br>
+                            console.log("You are an adult");<br>
+                            <br>
+                            if (age >= 60) {<br>
+                                console.log("And you are also elderly");<br>
+                            } else {<br>
+                                console.log("And you are not elderly");<br>
+                            }<br>
+                        } else {<br>
+                            console.log("You are a minor");<br>
+                        }<br>
+                        // You are an adult<br>
+                        // And you are also elderly
+                    </p>
+                </div>
+            </article>
+            <hr>
+
+            <h2>or, and and not</h2>
+            <p>
+                These operators are used inside <span>if</span> to combine or invert conditions.
+            </p>
+            <div class="cards-grid">
+                <article class="card" id="or">
+                    <h3>or (||)</h3>
+                    <p><span class="keyword">||</span> needs only one condition to be true.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let x = 1;<br>
+                            <br>
+                            if (x == 1 || x == 2) {<br>
+                                console.log("You typed 1 or 2");<br>
+                            }<br>
+                            // You typed 1 or 2
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="and">
+                    <h3>and (&&)</h3>
+                    <p><span class="keyword">&&</span> needs both conditions to be true.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let y = 7;<br>
+                            <br>
+                            if (y >= 1 && y <= 10) {<br>
+                                console.log("You typed 7");<br>
+                            }<br>
+                            // You typed 7
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="not">
+                    <h3>not (!)</h3>
+                    <p><span class="keyword">!</span> inverts the condition.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let z = 5;<br>
+                            <br>
+                            if (!(z != 5)) {<br>
+                                console.log("Correct, you typed 5");<br>
+                            }<br>
+                            // Correct, you typed 5
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <hr>
+
+            <h2>in and not in</h2>
+            <p>
+                In Python, <span>in</span> and <span>not in</span> check if a value is inside a list.
+                In JavaScript we use <span>includes</span>.
+            </p>
+            <div class="cards-grid">
+                <article class="card" id="in">
+                    <h3>in (includes)</h3>
+                    <p><span class="keyword">includes</span> checks if a value is inside an array.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let n = 2;<br>
+                            <br>
+                            if ([1, 2, 3].includes(n)) {<br>
+                                console.log("You chose 2");<br>
+                            }<br>
+                            // You chose 2
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" id="not-in">
+                    <h3>not in (!includes)</h3>
+                    <p><span class="keyword">!includes</span> checks if a value is not inside an array.</p>
+                    <h4>Example:</h4>
+                    <div class="code-block">
+                        <p>
+                            let n2 = 8;<br>
+                            <br>
+                            if (![1, 2, 3].includes(n2)) {<br>
+                                console.log("The number 8 is allowed");<br>
+                            }<br>
+                            // The number 8 is allowed
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <hr>
+
+            <h2>Inline if else</h2>
+            <p>
+                An <span>inline if else</span> is declared in the variable with the <span>ternary</span> operator <span>?</span> <span>:</span>.
+            </p>
+            <article class="card" id="inline">
+                <h3>Example:</h3>
+                <div class="code-block">
+                    <p>
+                        let age = 20;<br>
+                        let message = age >= 18 ? "adult" : "minor";<br>
+                        <br>
+                        console.log(message); // adult
+                    </p>
+                </div>
+            </article>
+            <hr>
+        </section>
+    </main>
+</body>
+</html>
