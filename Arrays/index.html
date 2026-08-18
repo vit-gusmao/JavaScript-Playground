@@ -8,50 +8,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
-    <title>Objects</title>
+    <title>Arrays</title>
 </head>
 <body>
     <main class="container">
-        <h1>Objects</h1>
+        <h1>Arrays</h1>
         <hr>
         <section class="content-section">
-            <h2>What are objects ?</h2>
+            <h2>What are arrays ?</h2>
             <p>
-                 A <span>object</span> is a set of information with keys and values, it can be <span>methods</span> or <span>properties</span>.
-            
+                 A <span>array</span> is a list full of values, the position(index) of the values starting from 0. <br> 
+                 Unique lists are called <span>vector</span> and lists of others lists are called <span>matrix</span>.
             </p>
-            <div class="cards-grid">
-                <article class="card" id="methods">
-                    <h3>Methods</h3>
-                    <p><span class="keyword">Methods</span> are values in form of function.</p>
-                </article>
-
-                <article class="card" id="number">
-                    <h3>Properties</h3>
-                    <p>
-                        <span class="keyword">Properties</span> are values in any format.
-                    </p>
-                </article>
-            </div>
            <article class="card" id="function-example">
-                <h3>Example:</h3>
+                <h3>Vector:</h3>
                 <div class="code-block">
                 <p>
-                    const Joao = {<br>
-                        completeName: "João Rodrigo da Silva", <br>
-                        age: 15, <br>
-                        showMessage: function() {<br>
-                           return "Welcome";
-                        },<br>
-                        city: "Berlim"
-
-                    }
-                    <br><br>
-                    console.log(Joao.completeName); // João Rodrigo da Silva <br>
-                    console.log(Joao.showMessage()); // Welcome 
+                    const names = ["André", "José", "Gustavo"]; <br>
+                    <br>
+                    console.log(names[0], names[1], names[2]); // André José Gustavo
                 </p>
                 </div>
             </article>
+            <article class="card" id="function-example">
+                <h3>Matrix:</h3>
+                <div class="code-block">
+                <p>
+                    const bag = [<br>
+                    <br>
+                    [cellphone, earphone], <br>
+                    [keys, money, ID], <br>
+                    [Pendrive, Coins] <br>
+                    <br>
+                    ]; <br>
+                    <br>
+                    console.log(bag[0]) // cellphone earphone <br>
+                    console.log(bag[1]) // keys money ID <br>
+                    console.log(bag[2]) // Pendrive Coins
+              
+                </p>
+                </div>
+            </article>
+            <hr>
         </section>
     </main>
 </body>
