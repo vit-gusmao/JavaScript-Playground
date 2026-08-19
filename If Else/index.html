@@ -15,52 +15,49 @@
         <h1>If Else</h1>
         <hr>
         <section class="content-section">
-            <h2>What are if else ?</h2>
+            <h2>What is "if else" ?</h2>
             <p>
-                <span>if else</span> are used to make decisions in the program.
-                The <span>if</span> checks a condition.
-                The <span>else</span> runs when the <span>if</span> condition is false.
-                <span>else if</span> is used to add more conditions (in Python this is <span>elif</span>).<br>
-                The order is always: <span>if</span>, then <span>else if</span>, then <span>else</span>.
+                <span>"if else"</span> is used to make decisions in the program, The <span>if</span> checks a condition and <span>else</span> runs when the <span>if</span> condition is false.
             </p>
             <hr>
-
-            <div class="cards-grid">
-                <article class="card" id="if">
-                    <h3>if else</h3>
-                    <p><span class="keyword">if</span> runs the code only when the condition is true.</p>
-                    <h4>Example:</h4>
-                    <div class="code-block">
-                        <p>
-                            let choice = 1;<br>
+            <article class="card" id="nested">
+                <h3>Example:</h3>
+                <div class="code-block">
+                    <p>
+                        let age = 21;<br>
+                        <br>
+                        if (age >= 18) {<br>
+                            console.log("You are an adult");<br>
                             <br>
-                            if (choice == 1) {<br>
-                                console.log(" chosed 1");<br>
-                            }<br>
-                            // you chose 1
-                        </p>
-                    </div>
-                </article>
-
-                <article class="card" id="else-if">
-                    <h3>else if</h3>
-                    <p><span class="keyword">else if</span> checks another condition when the first <span>if</span> is false.</p>
-                    <h4>Example:</h4>
-                    <div class="code-block">
-                        <p>
-                            let choice = 2;<br>
-                            <br>
-                            if (choice == 1) {<br>
-                                console.log("you chose 1");<br>
-                            } else if (choice == 2) {<br>
-                                console.log("you chose 2");<br>
-                            }<br>
-                            // you chose 2
-                        </p>
-                    </div>
-                </article>
-            </div>
+                        } else {<br>
+                            console.log("You are a minor");<br>
+                        }<br>
+                        // You are an adult<br>
+                    </p>
+                </div>
+            </article>
             <hr>
+
+            <h2>Else if</h2>
+            <p><span>else if</span> is used to add more conditions.<br> The order is always: <span>if</span>, then <span>else if</span>, then <span>else</span>.</p>
+            <article class="card" id="else-if">
+                <h3>Example:</h3>
+                <div class="code-block">
+                    <p>
+                        let choice = 2;<br>
+                        <br>
+                        if (choice == 1) {<br>
+                            console.log("choice 1");<br>
+                        } else if (choice == 2) {<br>
+                            console.log("choice is 2");<br>
+                        } else { <br>
+                            console.log("choice is 3"); <br>
+                        } <br>
+                        //  choice is 2
+                  
+                    </p>
+                </div>
+            </article>
 
             <h2>Nested if (if inside of if)</h2>
             <p>
@@ -145,14 +142,13 @@
             </div>
             <hr>
 
-            <h2>in and not in</h2>
+            <h2>Includes</h2>
             <p>
-                In Python, <span>in</span> and <span>not in</span> check if a value is inside a list.
-                In JavaScript we use <span>includes</span>.
+                <span>includes</span> are used to check if a value is inside a list.
             </p>
             <div class="cards-grid">
                 <article class="card" id="in">
-                    <h3>in (includes)</h3>
+                    <h3>is inside of a list</h3>
                     <p><span class="keyword">includes</span> checks if a value is inside an array.</p>
                     <h4>Example:</h4>
                     <div class="code-block">
@@ -168,7 +164,7 @@
                 </article>
 
                 <article class="card" id="not-in">
-                    <h3>not in (!includes)</h3>
+                    <h3>isn't inside of a list</h3>
                     <p><span class="keyword">!includes</span> checks if a value is not inside an array.</p>
                     <h4>Example:</h4>
                     <div class="code-block">
@@ -187,14 +183,14 @@
 
             <h2>Inline if else</h2>
             <p>
-                An <span>inline if else</span> is declared in the variable with the <span>ternary</span> operator <span>?</span> <span>:</span>.
+                An <span>inline if else</span> is declared in the variable with the <span>ternary</span> operator <span>?</span> <span>:</span> or using inline if else in a variable.
             </p>
             <article class="card" id="inline">
                 <h3>Example:</h3>
                 <div class="code-block">
                     <p>
-                        let age = 20;<br>
-                        let message = age >= 18 ? "adult" : "minor";<br>
+                        let age2 = 20;<br>
+                        let message = age2 >= 18 ? "adult" : "minor";<br>
                         <br>
                         console.log(message); // adult
                     </p>
