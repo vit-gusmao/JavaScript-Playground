@@ -1,5 +1,5 @@
-/* Page-specific styles for the root hub page.
-   Reset, header/footer, typography, and card shell live in ./assets/shared.css.
+/* Page-specific styles for the JavaScript hub page.
+   Reset, header/footer, typography, and card shell live in ../assets/shared.css.
    Only this page's real deltas from that shared baseline live here. */
 
 h1 {
@@ -15,13 +15,6 @@ p {
   color: var(--color-gray-light);
   font-size: 25px;
   margin-bottom: var(--space-lg);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
-  justify-self: center;
 }
 
 .topic-link {
@@ -67,14 +60,20 @@ p {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background-color: color-mix(in srgb, var(--color-yellow-primary) 12%, transparent);
-  overflow: hidden;
+  background-color: rgba(255, 215, 0, 0.12);
 }
 
-.card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card-icon-fn {
+  font-family: var(--font-family-main);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
 }
 
 .arrow-icon {
@@ -96,8 +95,27 @@ p {
   background-color: rgba(255, 215, 0, 0.12);
 }
 
-.section-card {
-  padding: var(--space-2xl) var(--space-lg);
+.sub-links {
+  list-style: none;
+  margin-top: var(--space-sm);
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sub-links li a {
+  color: var(--color-gray-light);
+  text-decoration: none;
+  font-size: 15px;
+  border-left: 3px solid var(--color-yellow-primary);
+  padding-left: var(--space-sm);
+  display: block;
+  transition: color var(--transition-normal);
+}
+
+.sub-links li a:hover {
+  color: var(--color-yellow-primary);
 }
 
 @media (min-width: 1024px) {
@@ -105,17 +123,9 @@ p {
 }
 
 @media (min-width: 1440px) {
-  .sections-grid { grid-template-columns: repeat(3, 1fr); }
+  .cards-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 span {
-  color: var(--color-yellow-primary);
-}
-
-span.orange {
-  color: var(--color-orange-primary);
-}
-
-span.blue {
-  color: var(--color-blue-primary);
+  color: yellow;
 }

@@ -7,54 +7,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/shared.css">
-    <script src="./script.js" defer></script>
-    <title>Objects</title>
+    <title>Tags</title>
 </head>
-<body>
+<body class="theme-orange">
     <header class="site-header">
         <div class="header-inner">
             <a class="brand" href="../index.html">
-                <img class="brand-logo" src="../../assets/icons/js-logo.svg" alt="" width="36" height="36">
-                <span class="brand-name">JavaScript</span>
+                <img class="brand-logo" src="../../assets/icons/html-logo.svg" alt="" width="36" height="36">
+                <span class="brand-name">HTML</span>
             </a>
             <a class="nav-home" href="../../index.html">Home</a>
         </div>
     </header>
 
     <main class="container">
-        <h1>Objects</h1>
+        <h1>Tags</h1>
         <hr>
         <section class="content-section">
-            <h2>What are objects ?</h2>
+            <h2>The building blocks of a page</h2>
             <p>
-                A <span class="keyword">object</span> is a set of information with keys and values, it can be <span class="keyword">methods</span> or <span class="keyword">properties</span>.
+                <span class="keyword">Tags</span> mark up content so the browser knows how to display it: headings for titles, paragraphs for text, links to navigate, images to display media and lists to group items.
             </p>
             <div class="cards-grid">
                 <article class="card">
-                    <h3>Methods</h3>
-                    <p><span class="keyword">Methods</span> are values in form of function.</p>
+                    <h3>Headings &amp; paragraphs</h3>
+                    <p><span class="keyword">h1</span>-<span class="keyword">h6</span> for titles, <span class="keyword">p</span> for text.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Properties</h3>
+                    <h3>Links</h3>
                     <p>
-                        <span class="keyword">Properties</span> are values in any format.
+                        <span class="keyword">a</span> with an <span class="keyword">href</span> attribute navigates to another page or section.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Images &amp; lists</h3>
+                    <p>
+                        <span class="keyword">img</span> displays media, <span class="keyword">ul</span>/<span class="keyword">ol</span> group items with <span class="keyword">li</span>.
                     </p>
                 </article>
             </div>
             <article class="card">
                 <h3>Example:</h3>
-                <pre class="code-block"><code>const Joao = {
-    completeName: "João Rodrigo da Silva",
-    age: 15,
-    showMessage: function() {
-        return "Welcome";
-    },
-    city: "Berlim"
-}
+                <pre class="code-block"><code>&lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
 
-console.log(Joao.completeName); // João Rodrigo da Silva
-console.log(Joao.showMessage()); // Welcome</code></pre>
+&lt;a href="https://developer.mozilla.org"&gt;MDN Docs&lt;/a&gt;
+
+&lt;img src="./photo.jpg" alt="A description of the photo"&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             </article>
             <hr>
         </section>
@@ -62,7 +68,7 @@ console.log(Joao.showMessage()); // Welcome</code></pre>
     <footer class="site-footer">
         <div class="footer-inner">
             <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
-            <img class="footer-logo" src="../../assets/icons/js-logo.svg" alt="JavaScript" width="28" height="28">
+            <img class="footer-logo" src="../../assets/icons/html-logo.svg" alt="HTML" width="28" height="28">
             <div class="footer-social">
                 <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>

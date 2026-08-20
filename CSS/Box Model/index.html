@@ -7,48 +7,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/shared.css">
-    <script src="./script.js" defer></script>
-    <title>Arrays</title>
+    <title>Box Model</title>
 </head>
-<body>
+<body class="theme-blue">
     <header class="site-header">
         <div class="header-inner">
             <a class="brand" href="../index.html">
-                <img class="brand-logo" src="../../assets/icons/js-logo.svg" alt="" width="36" height="36">
-                <span class="brand-name">JavaScript</span>
+                <img class="brand-logo" src="../../assets/icons/css-logo.svg" alt="" width="36" height="36">
+                <span class="brand-name">CSS</span>
             </a>
             <a class="nav-home" href="../../index.html">Home</a>
         </div>
     </header>
 
     <main class="container">
-        <h1>Arrays</h1>
+        <h1>Box Model</h1>
         <hr>
         <section class="content-section">
-            <h2>What are arrays ?</h2>
+            <h2>Every element is a box</h2>
             <p>
-                A <span class="keyword">array</span> is a list full of values, the position(index) of the values starting from 0.<br>
-                Unique lists are called <span class="keyword">vector</span> and lists of others lists are called <span class="keyword">matrices</span>.
+                From the inside out, every element is made of <span class="keyword">content</span>, <span class="keyword">padding</span>, <span class="keyword">border</span> and <span class="keyword">margin</span>. <span class="keyword">box-sizing</span> controls how width/height are calculated.
             </p>
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Padding &amp; border</h3>
+                    <p>Space inside the border, then the border itself.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Margin</h3>
+                    <p>
+                        Space outside the border, between this box and its neighbors.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>box-sizing</h3>
+                    <p>
+                        <span class="keyword">border-box</span> includes padding/border in the declared width.
+                    </p>
+                </article>
+            </div>
             <article class="card">
-                <h3>Vector:</h3>
-                <pre class="code-block"><code>const names = ["André", "José", "Gustavo"];
-
-console.log(names[0], names[1], names[2]); // André José Gustavo</code></pre>
-            </article>
-            <article class="card">
-                <h3>Matrices:</h3>
-                <pre class="code-block"><code>const bag = [
-
-    [cellphone, earphone],
-    [keys, money, ID],
-    [Pendrive, Coins]
-
-];
-
-console.log(bag[0]) // cellphone earphone
-console.log(bag[1]) // keys money ID
-console.log(bag[2]) // Pendrive Coins</code></pre>
+                <h3>Example:</h3>
+                <pre class="code-block"><code>.box {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 16px;
+    border: 2px solid #4FA8FF;
+    margin: 24px;
+}</code></pre>
             </article>
             <hr>
         </section>
@@ -56,7 +64,7 @@ console.log(bag[2]) // Pendrive Coins</code></pre>
     <footer class="site-footer">
         <div class="footer-inner">
             <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
-            <img class="footer-logo" src="../../assets/icons/js-logo.svg" alt="JavaScript" width="28" height="28">
+            <img class="footer-logo" src="../../assets/icons/css-logo.svg" alt="CSS" width="28" height="28">
             <div class="footer-social">
                 <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>
