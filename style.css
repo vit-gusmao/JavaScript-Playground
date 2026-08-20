@@ -2,7 +2,30 @@
    Reset, header/footer, typography, and card shell live in ./assets/shared.css.
    Only this page's real deltas from that shared baseline live here. */
 
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-logos img {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: block;
+}
+
+body {
+  border-color: var(--color-gray-light);
+}
+
+.site-header,
+.site-footer {
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
 h1 {
+  color: var(--color-gray-light);
   margin-bottom: var(--space-sm);
 }
 
