@@ -5,3 +5,9 @@
     justify-self: center;
   }
 }
+
+@media (min-width: 1024px) {
+  #condition {
+    grid-column: 3;
+  }
+}

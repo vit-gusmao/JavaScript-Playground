@@ -1,13 +1,13 @@
-/* Page-specific styles for If Else.
-   Reset, header/footer, typography, and card shell live in ../../assets/shared.css.
-   Only this page's real deltas from that shared baseline live here. */
-
 @media (min-width: 768px) {
-  /* "not (!)" is the odd third card in its grid at this breakpoint; center
-     it instead of leaving it stretched to the left column. */
   #not {
     grid-column: 1 / -1;
     width: calc(50% - (var(--space-lg) / 2));
     justify-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  #and {
+    grid-column: 3;
   }
 }
