@@ -120,9 +120,6 @@ p {
   color: var(--color-white);
 }
 
-/* Direct-child combinator so this only targets subpage cards (where
-   h3/p/h4 sit right inside .card) — root's home cards nest their text
-   deeper inside .topic-link, so they're unaffected. */
 .card > p,
 .card > h3,
 .card > h4 {
