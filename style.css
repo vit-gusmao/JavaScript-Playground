@@ -15,6 +15,20 @@
   display: block;
 }
 
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: center;
+}
+
+.footer-logos img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: block;
+}
+
 body {
   border-color: var(--color-gray-light);
 }
