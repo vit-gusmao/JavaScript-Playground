@@ -1,27 +1,24 @@
-function welcome() {
-    console.log("Welcome");
-}
+(function () {
+  'use strict';
 
-function caller(message, name) {
-    console.log(`${message} ${name}`);
-}
+  function run() {
+    function welcome() { console.log("welcome"); }
+    welcome();
 
-function callerNick(nickname) {
-    return `Welcome, ${nickname}`;
-}
+    function caller(message, name) { console.log(message, name); }
+    caller("Hello", "André");
 
-const calling = {
-    showMessage: function() {
-        return "Hello";
-        }
-    }
-    
-welcome(); // "Welcome"
+    function callerNick(nickname) { return `Welcome, ${nickname}`; }
+    console.log(callerNick("André"));
 
-caller("Hello", "André"); // Hello André 
-caller("Good Morning", "Paulo"); // Good Morning Paulo 
-caller("Good Night", "Zoe"); // Good Night Zoe
+    const calling = { showMessage: function () { return "Hello"; } };
+    console.log(calling.showMessage());
+  }
 
-console.log(callerNick("André")); // Welcome, André
-
-console.log(calling.showMessage()); // Hello
+  var btn = document.querySelector('[data-run]');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      window.runToPanel(run, '[data-console]');
+    });
+  }
+})();

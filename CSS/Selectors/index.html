@@ -1,87 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="css">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/shared.css">
-    <title>Selectors</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#3B9BFF">
+  <meta name="description" content="Target HTML elements with precision: class, id, combinators and pseudo-classes.">
+  <title>Selectors · CSS Playground</title>
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/header.css">
+  <link rel="stylesheet" href="../../assets/css/footer.css">
+  <link rel="stylesheet" href="../../assets/css/atmosphere.css">
+  <link rel="stylesheet" href="../../assets/css/cards.css">
+  <link rel="stylesheet" href="../../assets/css/buttons.css">
+  <link rel="stylesheet" href="../../assets/css/lesson.css">
+  <link rel="stylesheet" href="../../assets/css/code.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
 </head>
-<body class="theme-blue">
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="../index.html">
-                <img class="brand-logo" src="../../assets/icons/css-logo.svg" alt="" width="36" height="36">
-                <span class="brand-name">CSS</span>
-            </a>
-            <a class="nav-home" href="../../index.html">Home</a>
-        </div>
-    </header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs lesson-orbs" aria-hidden="true">
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:0; left:-10%; width:360px; height:360px; background:var(--accent-glow);"></span>
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:30%; right:-10%; width:260px; height:260px; background:rgba(120,80,255,0.20);"></span>
+  </div>
+  <div class="bg-vignette" aria-hidden="true"></div>
 
-    <main class="container">
-        <h1>Selectors</h1>
-        <hr>
-        <section class="content-section">
-            <h2>Choosing which elements to style</h2>
-            <p>
-                A <span class="keyword">selector</span> targets one or more elements. You can select by element name, <span class="keyword">.class</span>, <span class="keyword">#id</span>, or combine selectors and pseudo-classes for more precision.
-            </p>
-            <div class="cards-grid">
-                <article class="card">
-                    <h3>Class &amp; id</h3>
-                    <p><span class="keyword">.class</span> can repeat, <span class="keyword">#id</span> is unique per page.</p>
-                </article>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../../assets/icons/css-logo.svg" alt="" width="32" height="32">
+        <span class="brand-name">CSS Playground</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="../../index.html">Home</a>
+        <a class="nav__link nav__link--js" href="../../JavaScript/index.html">JavaScript</a>
+        <a class="nav__link nav__link--html" href="../../HTML/index.html">HTML</a>
+        <a class="nav__link nav__link--css is-active" href="../index.html" aria-current="page">CSS</a>
+      </nav>
+      <div class="header-gh">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon icon-menu" aria-hidden="true" width="20" height="20"><use href="../../assets/icons/sprite.svg#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true" width="20" height="20"><use href="../../assets/icons/sprite.svg#icon-close"></use></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
 
-                <article class="card">
-                    <h3>Combinators</h3>
-                    <p>
-                        <span class="keyword">&gt;</span> direct child, <span class="keyword">space</span> descendant, <span class="keyword">+</span> adjacent sibling.
-                    </p>
-                </article>
+  <main id="main" class="lesson-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="../index.html">CSS</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Selectors</span>
+    </nav>
+    <a class="back-link" href="../index.html">
+      <svg aria-hidden="true" width="14" height="14"><use href="../../assets/icons/sprite.svg#icon-arrow-right" transform="rotate(180 12 12)"></use></svg>
+      Back to CSS
+    </a>
 
-                <article class="card">
-                    <h3>Pseudo-classes</h3>
-                    <p>
-                        <span class="keyword">:hover</span>, <span class="keyword">:first-child</span> and <span class="keyword">:nth-child()</span> target states or positions.
-                    </p>
-                </article>
-            </div>
-            <article class="card">
-                <h3>Example:</h3>
-                <pre class="code-block"><code>.card {
-    background: #222;
+    <div class="lesson-hero">
+      <span class="lesson-hero__icon" aria-hidden="true">
+        <svg><use href="../../assets/icons/sprite.svg#icon-hash"></use></svg>
+      </span>
+      <div>
+        <h1 class="lesson-hero__title">Selectors</h1>
+        <p class="lesson-hero__lead">A selector targets one or more elements. Select by element name, <span class="keyword">.class</span>, <span class="keyword">#id</span>, or combine them with combinators and pseudo-classes.</p>
+      </div>
+    </div>
+
+    <div class="lesson-content">
+      <div class="concept-cards">
+        <article class="concept-card"><h3>Class &amp; id</h3><p><code>.class</code> can repeat, <code>#id</code> is unique per page.</p></article>
+        <article class="concept-card"><h3>Combinators</h3><p><code>&gt;</code> direct child, space descendant, <code>+</code> adjacent sibling.</p></article>
+        <article class="concept-card"><h3>Pseudo-classes</h3><p><code>:hover</code>, <code>:first-child</code>, <code>:nth-child()</code> target states or positions.</p></article>
+      </div>
+
+      <figure class="code">
+        <figcaption><span>CSS</span><button type="button" class="code__copy" data-copy>Copy</button></figcaption>
+        <pre><code>.card {
+  background: #12141C;
 }
 
 #main-title {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 nav > a {
-    color: blue;
+  color: #3B9BFF;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }</code></pre>
-            </article>
-            <hr>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
-            <img class="footer-logo" src="../../assets/icons/css-logo.svg" alt="CSS" width="28" height="28">
-            <div class="footer-social">
-                <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-linkedin"></use></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+      </figure>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="lesson-nav__link" href="../Introduction/index.html">
+        Previous
+        <strong>← Introduction</strong>
+      </a>
+      <a class="lesson-nav__link lesson-nav__link--next" href="../Box-Model/index.html">
+        Next
+        <strong>Box Model →</strong>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
+      <span class="footer-logos"><img src="../../assets/icons/css-logo.svg" alt="CSS" width="24" height="24"></span>
+      <div class="footer-social">
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg></a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-linkedin"></use></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/lesson.js" defer></script>
 </body>
 </html>

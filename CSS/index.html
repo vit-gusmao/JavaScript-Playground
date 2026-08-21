@@ -1,140 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="css">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/shared.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#3B9BFF">
+  <meta name="description" content="Repository dedicated to studying CSS, featuring explanations, practical examples, and fundamental concepts of styling the web.">
+  <title>CSS Playground</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/atmosphere.css">
+  <link rel="stylesheet" href="../assets/css/cards.css">
+  <link rel="stylesheet" href="../assets/css/buttons.css">
+  <link rel="stylesheet" href="../assets/css/hub.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body class="theme-blue">
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="../index.html">
-                <img class="brand-logo" src="../assets/icons/css-logo.svg" alt="" width="36" height="36">
-                <span class="brand-name">CSS</span>
-            </a>
-            <a class="nav-home" href="../index.html">Home</a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:6%; left:-6%; width:260px; height:260px; background:rgba(45,127,249,0.3);"></span>
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:14%; right:-6%; width:220px; height:220px; background:rgba(120,80,255,0.3);"></span>
+  </div>
+  <div class="bg-vignette" aria-hidden="true"></div>
+  <canvas class="bg-particles" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <img class="brand-logo" src="../assets/icons/css-logo.svg" alt="" width="32" height="32">
+        <span class="brand-name">CSS Playground</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="../index.html">Home</a>
+        <a class="nav__link nav__link--js" href="../JavaScript/index.html">JavaScript</a>
+        <a class="nav__link nav__link--html" href="../HTML/index.html">HTML</a>
+        <a class="nav__link nav__link--css is-active" href="./index.html" aria-current="page">CSS</a>
+      </nav>
+      <div class="header-gh">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon icon-menu" aria-hidden="true" width="20" height="20"><use href="../assets/icons/sprite.svg#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true" width="20" height="20"><use href="../assets/icons/sprite.svg#icon-close"></use></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-github"></use></svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <section class="hub-hero">
+      <div class="hub-hero__top">
+        <h1 class="hub-hero__title">CSS</h1>
+        <div class="hero-shield" aria-hidden="true">
+          <img src="../assets/icons/css-logo.svg" alt="">
+          <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+          <span class="spark"></span><span class="spark"></span><span class="spark"></span>
         </div>
-    </header>
+      </div>
+      <p class="hub-hero__subtitle">Repository dedicated to studying <strong>CSS</strong>, featuring explanations, practical examples, and fundamental concepts of styling the web.</p>
+      <div class="hero-line" aria-hidden="true"></div>
+    </section>
 
-    <main class="container">
-        <h1>CSS</h1>
-        <br>
-        <h2 class="subtitle">Repository dedicated to studying basic <span>CSS</span>, featuring explanations,<br>
+    <section class="hub-grid" aria-label="CSS topics">
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Introduction/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-brush"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Introduction</span>
+            <span class="topic-card__desc">What is CSS and how it works.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-            practical examples, and fundamental concepts of the language.<h2>
-        <br>
-        <hr>
-        <section class="content-section" id="topics">
-            <div class="cards-grid">
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Selectors/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-hash"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Selectors</span>
+            <span class="topic-card__desc">Target HTML elements with precision.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Selectors/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-code"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Selectors</h3>
-                                <p>Class, id, element selectors, combinators and pseudo-classes.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Box-Model/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-box"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Box Model</span>
+            <span class="topic-card__desc">Understand margins, borders, padding and content.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Box Model/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-braces"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Box Model</h3>
-                                <p>Content, padding, border, margin and box-sizing.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Layout/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-layout"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Layout</span>
+            <span class="topic-card__desc">Display, position, float, flexbox and grid.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Flexbox/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-repeat"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Flexbox</h3>
-                                <p>display: flex, justify-content, align-items and direction.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Typography/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-type"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Typography</span>
+            <span class="topic-card__desc">Fonts, text styles, line height and more.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Grid/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-grid"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Grid</h3>
-                                <p>display: grid, template columns/rows and gap.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Colors-and-Backgrounds/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-droplet"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Colors &amp; Backgrounds</span>
+            <span class="topic-card__desc">Colors, gradients, backgrounds and transparency.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Colors and Typography/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-git-fork"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Colors and Typography</h3>
-                                <p>hex/rgb/hsl colors, font-family, font-size and line-height.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Responsive-Design/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-devices"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Responsive Design</span>
+            <span class="topic-card__desc">Media queries and mobile-first techniques.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-            </div>
-            <hr>
-        </section>
-    </main>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Effects/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-sparkles"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Effects</span>
+            <span class="topic-card__desc">Shadows, filters, transitions and animations.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
-            <img class="footer-logo" src="../assets/icons/css-logo.svg" alt="CSS" width="28" height="28">
-            <div class="footer-social">
-                <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-github"></use></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-linkedin"></use></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Lists-and-Tables/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-list"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Lists &amp; Tables</span>
+            <span class="topic-card__desc">Style lists, tables and basic elements.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Forms/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-form"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Forms</span>
+            <span class="topic-card__desc">Style inputs, buttons, checkboxes and more.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Components/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-component"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Components</span>
+            <span class="topic-card__desc">Build reusable UI components with CSS.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Best-Practices/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-braces"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Best Practices</span>
+            <span class="topic-card__desc">Write clean, maintainable and scalable CSS.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
+      <span class="footer-logos">
+        <img src="../assets/icons/css-logo.svg" alt="CSS" width="24" height="24">
+      </span>
+      <div class="footer-social">
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-github"></use></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-linkedin"></use></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/atmosphere.js" defer></script>
 </body>
 </html>

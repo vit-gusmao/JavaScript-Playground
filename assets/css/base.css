@@ -1,0 +1,140 @@
+/* Body, background layers, base typography */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-ui);
+  color: var(--text-2);
+  background: var(--bg-0);
+  line-height: 1.6;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-1);
+  font-weight: 700;
+}
+
+h1, h2, [id] {
+  scroll-margin-top: var(--header-offset);
+}
+
+p {
+  color: var(--text-2);
+}
+
+/* Skip link */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 80;
+  background: var(--bg-2);
+  color: var(--text-1);
+  border: 1px solid var(--accent-line);
+  padding: 10px 16px;
+  border-radius: var(--r-sm);
+  transition: top var(--t-fast) ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: inherit;
+}
+
+/* Background layers, shared across pages that opt in */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 0.8px, transparent 0.8px);
+  background-size: 32px 32px;
+  opacity: 0.55;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+}
+
+[data-theme="hub"] .bg-grid {
+  opacity: 0.18;
+}
+
+[data-theme="js"] .bg-grid {
+  opacity: 0.32;
+}
+
+.bg-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.bg-orbs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: strict;
+}
+
+.bg-orbs__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(68px);
+  will-change: transform;
+  animation: orb-pulse var(--t-orb) ease-in-out infinite alternate;
+}
+
+@keyframes orb-pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-orbs__orb {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg-orbs__orb--side {
+    opacity: 0.3;
+  }
+}
+
+canvas.bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Reduced motion global */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

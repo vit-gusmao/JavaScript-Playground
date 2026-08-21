@@ -1,81 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="html">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/shared.css">
-    <title>Forms</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FF5A1F">
+  <meta name="description" content="Collect data with HTML forms: inputs, labels and validation.">
+  <title>Forms · HTML Playground</title>
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/header.css">
+  <link rel="stylesheet" href="../../assets/css/footer.css">
+  <link rel="stylesheet" href="../../assets/css/atmosphere.css">
+  <link rel="stylesheet" href="../../assets/css/cards.css">
+  <link rel="stylesheet" href="../../assets/css/buttons.css">
+  <link rel="stylesheet" href="../../assets/css/lesson.css">
+  <link rel="stylesheet" href="../../assets/css/code.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
 </head>
-<body class="theme-orange">
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="../index.html">
-                <img class="brand-logo" src="../../assets/icons/html-logo.svg" alt="" width="36" height="36">
-                <span class="brand-name">HTML</span>
-            </a>
-            <a class="nav-home" href="../../index.html">Home</a>
-        </div>
-    </header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs lesson-orbs" aria-hidden="true">
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:0; left:-10%; width:360px; height:360px; background:var(--accent-glow);"></span>
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:30%; right:-10%; width:260px; height:260px; background:rgba(59,155,255,0.20);"></span>
+  </div>
+  <div class="bg-vignette" aria-hidden="true"></div>
 
-    <main class="container">
-        <h1>Forms</h1>
-        <hr>
-        <section class="content-section">
-            <h2>Collecting input from the user</h2>
-            <p>
-                A <span class="keyword">form</span> element groups inputs together and sends their data somewhere. Each field should have a <span class="keyword">label</span> so it stays accessible.
-            </p>
-            <div class="cards-grid">
-                <article class="card">
-                    <h3>Inputs</h3>
-                    <p><span class="keyword">input</span> types like text, email and password.</p>
-                </article>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../../assets/icons/html-logo.svg" alt="" width="32" height="32">
+        <span class="brand-name">HTML Playground</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="../../index.html">Home</a>
+        <a class="nav__link nav__link--js" href="../../JavaScript/index.html">JavaScript</a>
+        <a class="nav__link nav__link--html is-active" href="../index.html" aria-current="page">HTML</a>
+        <a class="nav__link nav__link--css" href="../../CSS/index.html">CSS</a>
+      </nav>
+      <div class="header-gh">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon icon-menu" aria-hidden="true" width="20" height="20"><use href="../../assets/icons/sprite.svg#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true" width="20" height="20"><use href="../../assets/icons/sprite.svg#icon-close"></use></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
 
-                <article class="card">
-                    <h3>Labels</h3>
-                    <p>
-                        <span class="keyword">label</span> connects to an input via the <span class="keyword">for</span>/<span class="keyword">id</span> pair.
-                    </p>
-                </article>
+  <main id="main" class="lesson-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="../index.html">HTML</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Forms</span>
+    </nav>
+    <a class="back-link" href="../index.html">
+      <svg aria-hidden="true" width="14" height="14"><use href="../../assets/icons/sprite.svg#icon-arrow-right" transform="rotate(180 12 12)"></use></svg>
+      Back to HTML
+    </a>
 
-                <article class="card">
-                    <h3>Validation</h3>
-                    <p>
-                        Attributes like <span class="keyword">required</span> and <span class="keyword">pattern</span> validate before submit.
-                    </p>
-                </article>
-            </div>
-            <article class="card">
-                <h3>Example:</h3>
-                <pre class="code-block"><code>&lt;form action="/subscribe" method="post"&gt;
-    &lt;label for="email"&gt;Email&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required&gt;
+    <div class="lesson-hero">
+      <span class="lesson-hero__icon" aria-hidden="true">
+        <svg><use href="../../assets/icons/sprite.svg#icon-form"></use></svg>
+      </span>
+      <div>
+        <h1 class="lesson-hero__title">Forms</h1>
+        <p class="lesson-hero__lead">A <span class="keyword">form</span> groups inputs together and sends their data somewhere. Each field should have a <span class="keyword">label</span> so it stays accessible.</p>
+      </div>
+    </div>
 
-    &lt;label for="age"&gt;Age&lt;/label&gt;
-    &lt;input type="number" id="age" name="age" min="0"&gt;
+    <div class="lesson-content">
+      <div class="concept-cards">
+        <article class="concept-card"><h3>Inputs</h3><p><span class="keyword">input</span> types like text, email and password.</p></article>
+        <article class="concept-card"><h3>Labels</h3><p><span class="keyword">label</span> connects to an input via the <span class="keyword">for</span>/<span class="keyword">id</span> pair.</p></article>
+        <article class="concept-card"><h3>Validation</h3><p>Attributes like <span class="keyword">required</span> and <span class="keyword">pattern</span> validate before submit.</p></article>
+      </div>
 
-    &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
+      <figure class="code">
+        <figcaption><span>HTML</span><button type="button" class="code__copy" data-copy>Copy</button></figcaption>
+        <pre><code>&lt;form action="/subscribe" method="post"&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;label for="age"&gt;Age&lt;/label&gt;
+  &lt;input type="number" id="age" name="age" min="0"&gt;
+
+  &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
 &lt;/form&gt;</code></pre>
-            </article>
-            <hr>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
-            <img class="footer-logo" src="../../assets/icons/html-logo.svg" alt="HTML" width="28" height="28">
-            <div class="footer-social">
-                <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-linkedin"></use></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+      </figure>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="lesson-nav__link" href="../Tables/index.html">
+        Previous
+        <strong>← Tables</strong>
+      </a>
+      <a class="lesson-nav__link lesson-nav__link--next" href="../Lists/index.html">
+        Next
+        <strong>Lists →</strong>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
+      <span class="footer-logos"><img src="../../assets/icons/html-logo.svg" alt="HTML" width="24" height="24"></span>
+      <div class="footer-social">
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg></a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-linkedin"></use></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/lesson.js" defer></script>
 </body>
 </html>

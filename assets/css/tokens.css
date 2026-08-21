@@ -1,0 +1,89 @@
+/* Design tokens — colors, type, space, radius, motion.
+   Every hex/rgba in the project must come from here. */
+
+:root {
+  /* Neutrals */
+  --bg-0: #03050A;
+  --bg-1: #0B0D14;
+  --bg-2: #12141C;
+  --bg-3: #1A1D28;
+  --line: rgba(255, 255, 255, 0.08);
+  --text-1: #F4F6FB;
+  --text-2: #C5CAD6;
+  --text-3: #8B92A5;
+  --white: #FFFFFF;
+
+  /* Glass */
+  --glass: rgba(12, 16, 28, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --header-bg: rgba(10, 14, 24, 0.55);
+  --card-glass: rgba(10, 14, 22, 0.62);
+
+  /* Fonts — single UI typeface carries the display role too */
+  --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-ui: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-2xl: 16px;
+  --r-card: 16px;
+  --r-full: 999px;
+
+  /* Motion */
+  --t-fast: 160ms;
+  --t: 250ms;
+  --t-slow: 600ms;
+  --t-orb: 10s;
+  --t-orbit: 14s;
+  --t-spark: 2.4s;
+  --ease-in: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --header-height: 52px;
+  --header-offset: 80px;
+  --max-content: 1200px;
+  --max-lesson: 860px;
+
+  /* Default accent = JS (Home overrides via gradient, see home.css) */
+  --accent: #F7DF1E;
+  --accent-2: #FFE566;
+  --accent-dim: rgba(247, 223, 30, 0.12);
+  --accent-line: rgba(247, 223, 30, 0.48);
+  --accent-glow: rgba(247, 223, 30, 0.28);
+}
+
+:root[data-theme="js"] {
+  --accent: #F7DF1E;
+  --accent-2: #FFE566;
+  --accent-dim: rgba(247, 223, 30, 0.12);
+  --accent-line: rgba(247, 223, 30, 0.48);
+  --accent-glow: rgba(247, 223, 30, 0.28);
+}
+
+:root[data-theme="html"] {
+  --accent: #E44D26;
+  --accent-2: #FF8A4C;
+  --accent-dim: rgba(228, 77, 38, 0.12);
+  --accent-line: rgba(228, 77, 38, 0.5);
+  --accent-glow: rgba(228, 77, 38, 0.3);
+}
+
+:root[data-theme="css"] {
+  --accent: #2D7FF9;
+  --accent-2: #7EC2FF;
+  --accent-dim: rgba(45, 127, 249, 0.12);
+  --accent-line: rgba(45, 127, 249, 0.48);
+  --accent-glow: rgba(45, 127, 249, 0.3);
+}
+
+:root[data-theme="hub"] {
+  --accent: #F7DF1E;
+  --accent-2: #FFE566;
+  --accent-dim: rgba(247, 223, 30, 0.12);
+  --accent-line: rgba(255, 255, 255, 0.16);
+  --accent-glow: rgba(247, 223, 30, 0.28);
+}

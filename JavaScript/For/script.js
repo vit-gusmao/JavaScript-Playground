@@ -1,42 +1,22 @@
-const qnt = 3;
-const phrases = ["Hello", "JavaScript", "Playground"];
+(function () {
+  'use strict';
 
-for (let i = 0; i < qnt; i++) {
-    console.log(phrases[i]);
-}
-// Hello
-// JavaScript
-// Playground
+  function run() {
+    const phrases = ["Hello", "JavaScript", "Playground"];
+    for (let i = 0; i < phrases.length; i++) {
+      console.log(phrases[i]);
+    }
 
-const showCount = 2;
+    const numbers = [10, 20, 30];
+    let sum = 0;
+    for (const num of numbers) { sum += num; }
+    console.log(sum);
+  }
 
-for (let i = 0; i < showCount; i++) {
-    console.log(phrases[i]);
-}
-// Hello
-// JavaScript
-
-const numbers = [10, 20, 30];
-
-console.log("All numbers:", numbers.join(", "));
-// All numbers: 10, 20, 30
-
-console.log(numbers.join(" + "));
-// 10 + 20 + 30
-
-let sum = 0;
-for (const num of numbers) {
-    sum += num;
-}
-
-console.log("=", sum);
-// = 60
-
-const values = [10, 20, 30];
-let total = 0;
-
-values.forEach(function (num) {
-    total += num;
-});
-
-console.log(total); // 60
+  var btn = document.querySelector('[data-run]');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      window.runToPanel(run, '[data-console]');
+    });
+  }
+})();

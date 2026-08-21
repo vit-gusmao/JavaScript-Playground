@@ -1,14 +1,24 @@
-const names = ["André", "José", "Gustavo"];
+(function () {
+  'use strict';
 
-const bag = [
-    
-    [cellphone, earphone],
-    [keys, money, ID],
-    [Pendrive, Coins]
-];
+  function run() {
+    const names = ["André", "José", "Gustavo"];
+    console.log(names[0], names[1], names[2]);
 
-console.log(names[0], names[1], names[2]); // André José Gustavo
+    const bag = [
+      ["cellphone", "earphone"],
+      ["keys", "money", "ID"],
+      ["pendrive", "coins"]
+    ];
+    console.log(bag[0]);
+    console.log(bag[1]);
+    console.log(bag[2]);
+  }
 
-console.log(bag[0]) // cellphone earphone
-console.log(bag[1]) // keys money ID
-console.log(bag[2]) // Pendrive Coins
+  var btn = document.querySelector('[data-run]');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      window.runToPanel(run, '[data-console]');
+    });
+  }
+})();

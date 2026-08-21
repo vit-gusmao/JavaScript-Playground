@@ -1,140 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="html">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/shared.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>HTML</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FF5A1F">
+  <meta name="description" content="Repository dedicated to studying basic HTML, featuring explanations, practical examples, and fundamental concepts of markup language.">
+  <title>HTML Playground</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/atmosphere.css">
+  <link rel="stylesheet" href="../assets/css/cards.css">
+  <link rel="stylesheet" href="../assets/css/buttons.css">
+  <link rel="stylesheet" href="../assets/css/hub.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body class="theme-orange">
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="../index.html">
-                <img class="brand-logo" src="../assets/icons/html-logo.svg" alt="" width="36" height="36">
-                <span class="brand-name">HTML</span>
-            </a>
-            <a class="nav-home" href="../index.html">Home</a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:6%; left:-6%; width:260px; height:260px; background:rgba(228,77,38,0.28);"></span>
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:14%; left:34%; width:190px; height:190px; background:rgba(228,77,38,0.22);"></span>
+    <span class="bg-orbs__orb bg-orbs__orb--side" style="top:22%; right:6%; width:90px; height:90px; background:rgba(45,127,249,0.28);"></span>
+  </div>
+  <div class="bg-vignette" aria-hidden="true"></div>
+  <canvas class="bg-particles" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <img class="brand-logo" src="../assets/icons/html-logo.svg" alt="" width="32" height="32">
+        <span class="brand-name">HTML Playground</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="../index.html">Home</a>
+        <a class="nav__link nav__link--js" href="../JavaScript/index.html">JavaScript</a>
+        <a class="nav__link nav__link--html is-active" href="./index.html" aria-current="page">HTML</a>
+        <a class="nav__link nav__link--css" href="../CSS/index.html">CSS</a>
+      </nav>
+      <div class="header-gh">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon icon-menu" aria-hidden="true" width="20" height="20"><use href="../assets/icons/sprite.svg#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true" width="20" height="20"><use href="../assets/icons/sprite.svg#icon-close"></use></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-github"></use></svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <section class="hub-hero">
+      <div class="hub-hero__top">
+        <h1 class="hub-hero__title">HTML</h1>
+        <div class="hero-shield" aria-hidden="true">
+          <img src="../assets/icons/html-logo.svg" alt="">
+          <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+          <span class="spark"></span><span class="spark"></span><span class="spark"></span>
         </div>
-    </header>
+      </div>
+      <p class="hub-hero__subtitle">Repository dedicated to studying basic <strong>HTML</strong>, featuring explanations, practical examples, and fundamental concepts of markup language.</p>
+      <div class="hero-line" aria-hidden="true"></div>
+    </section>
 
-    <main class="container">
-        <h1>HTML</h1>
-        <br>
-        <h2 class="subtitle">Repository dedicated to studying basic <span>HTML</span>, featuring explanations,<br>
+    <section class="hub-grid" aria-label="HTML topics">
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Introduction/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-code"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Introduction</span>
+            <span class="topic-card__desc">What is HTML and how it works.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-            practical examples, and fundamental concepts of the language.<h2>
-        <br>
-        <hr>
-        <section class="content-section" id="topics">
-            <div class="cards-grid">
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Elements/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-type"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Elements</span>
+            <span class="topic-card__desc">Tags and the building blocks of HTML.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Basic Structure/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-rocket"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Basic Structure</h3>
-                                <p>Doctype, html, head and body.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Attributes/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-list"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Attributes</span>
+            <span class="topic-card__desc">HTML attributes and how to use them.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Tags/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-code"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Tags</h3>
-                                <p>Headings, paragraphs, links, images and lists.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Links/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-link"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Links</span>
+            <span class="topic-card__desc">Create hyperlinks to navigate the web.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Forms/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-grid"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Forms</h3>
-                                <p>Inputs, labels and basic validation.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Images/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-image"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Images</span>
+            <span class="topic-card__desc">Embed images in your web pages.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Semantic HTML/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-git-fork"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Semantic HTML</h3>
-                                <p>header, nav, main, section, article and footer.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Tables/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-table"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Tables</span>
+            <span class="topic-card__desc">Organize data with HTML tables.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-                <article class="card">
-                    <a class="topic-link" href="./Tables/index.html">
-                        <div class="card-top">
-                            <span class="card-icon">
-                                <svg class="icon" aria-hidden="true" width="24" height="24"><use href="../assets/icons/sprite.svg#icon-braces"></use></svg>
-                            </span>
-                            <div class="card-copy">
-                                <h3>Tables</h3>
-                                <p>table, tr, td, th, thead and tbody.</p>
-                            </div>
-                            <span class="arrow-icon">
-                                <svg class="icon" aria-hidden="true" width="16" height="16"><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg>
-                            </span>
-                        </div>
-                    </a>
-                </article>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Forms/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-form"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Forms</span>
+            <span class="topic-card__desc">Collect data with HTML forms.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-            </div>
-            <hr>
-        </section>
-    </main>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Lists/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-list"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Lists</span>
+            <span class="topic-card__desc">Ordered, unordered and description lists.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
-            <img class="footer-logo" src="../assets/icons/html-logo.svg" alt="HTML" width="28" height="28">
-            <div class="footer-social">
-                <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-github"></use></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-linkedin"></use></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Media/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-play"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Media</span>
+            <span class="topic-card__desc">Add audio and video to your pages.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Semantic-HTML/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-layout"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Semantic HTML</span>
+            <span class="topic-card__desc">Use semantic elements for better structure.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+
+      <article class="topic-card">
+        <a class="topic-card__main" href="./Meta-Tags/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-file"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">Meta Tags</span>
+            <span class="topic-card__desc">SEO and metadata fundamentals.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+
+      <article class="topic-card">
+        <a class="topic-card__main" href="./HTML5-Features/index.html">
+          <span class="topic-card__icon"><svg><use href="../assets/icons/sprite.svg#icon-rocket"></use></svg></span>
+          <span class="topic-card__body">
+            <span class="topic-card__title">HTML5 Features</span>
+            <span class="topic-card__desc">Explore modern HTML5 elements and APIs.</span>
+          </span>
+          <span class="card-arrow"><svg><use href="../assets/icons/sprite.svg#icon-arrow-right"></use></svg></span>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
+      <span class="footer-logos">
+        <img src="../assets/icons/html-logo.svg" alt="HTML" width="24" height="24">
+      </span>
+      <div class="footer-social">
+        <a class="icon-btn" href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-github"></use></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../assets/icons/sprite.svg#icon-linkedin"></use></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/atmosphere.js" defer></script>
 </body>
 </html>

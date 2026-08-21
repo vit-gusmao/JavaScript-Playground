@@ -1,0 +1,58 @@
+/* Code blocks */
+
+.code {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: #0A0C12;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+}
+
+.code figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  font-size: 12px;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.code__copy {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  padding: 4px 10px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  transition: color var(--t-fast) ease, border-color var(--t-fast) ease;
+}
+
+.code__copy:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+}
+
+.code__copy.is-copied {
+  color: var(--accent);
+  border-color: var(--accent-line);
+}
+
+.code pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.code code {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-1);
+  white-space: pre;
+}
+
+.code .kw { color: var(--accent); }
+.code .str { color: #7EC2FF; }
+.code .cm { color: var(--text-3); font-style: italic; }
