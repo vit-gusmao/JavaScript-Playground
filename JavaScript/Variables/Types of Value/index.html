@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/shared.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Values</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="../../index.html">
+                <img class="brand-logo" src="../../../assets/icons/js-logo.svg" alt="" width="36" height="36">
+                <span class="brand-name">JavaScript</span>
+            </a>
+            <a class="nav-home" href="../../../index.html">Home</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Values</h1>
+        <hr>
+        <section class="content-section">
+            <h2>What are values ?</h2>
+            <p>
+                Values are the kinds of data that variables can hold, like the "content" inside the box, each variable can store a value of one of these types.<br>
+                The type of value determines what you can do with that variable in your code.
+            </p>
+            <hr>
+
+            <h2>types of Values</h2>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>String</h3>
+                    <p>
+                        A <span class="keyword">string</span> is a sequence of characters, usually used to represent text values.
+                    </p>
+                    <h4>Example:</h4>
+                    <pre class="code-block"><code>let name = "Maria";
+
+console.log("Welcome, ${name}"); // Welcome, Maria</code></pre>
+                </article>
+
+                <article class="card">
+                    <h3>Number</h3>
+                    <p>
+                        A <span class="keyword">number</span> is a numeric value, which can be an integer or a decimal (floating point).
+                    </p>
+                    <h4>Example:</h4>
+                    <pre class="code-block"><code>let age = 25;
+let price = 9.99;
+let num = 2e10;
+
+console.log(age + price); // 34.99
+console.log(num); // 20000000000</code></pre>
+                </article>
+
+                <article class="card">
+                    <h3>Boolean</h3>
+                    <p>
+                        A <span class="keyword">boolean</span> represents a logical value and can only be <span class="keyword">true</span> or <span class="keyword">false</span>.<br>
+                        <br>
+                        anything that has a value is considered <span class="keyword">true</span>, while anything that is null is considered <span class="keyword">false</span>.
+                    </p>
+                    <h4>Example:</h4>
+                    <pre class="code-block"><code>let isLoggedIn = true;
+let isAdult = false;
+let productsLeft = 0;
+let productList = 1;
+
+console.log(isLoggedIn); // true
+console.log(isAdult); // false
+console.log(productsLeft); // false
+console.log(productList); // true</code></pre>
+                </article>
+
+                <article class="card">
+                    <h3>Undefined</h3>
+                    <p>
+                        <span class="keyword">undefined</span> means a variable has been declared but has not yet been assigned any value.
+                    </p>
+                    <h4>Example:</h4>
+                    <pre class="code-block"><code>let result;
+
+console.log(result); // undefined</code></pre>
+                </article>
+
+                <article class="card" id="null">
+                    <h3>Null</h3>
+                    <p>
+                        <span class="keyword">null</span> is a special value that represents the intentional absence of any object value. It is often used to indicate that a variable should be empty, or has no value on purpose.
+                    </p>
+                    <h4>Example:</h4>
+                    <pre class="code-block"><code>shoppingCartPrice = null;
+console.log(shoppingCartPrice); // null</code></pre>
+                </article>
+            </div>
+            <hr>
+
+            <h2>Typeof</h2>
+            <p>
+                The <span class="keyword">typeof</span> operator in JavaScript is used to find out the type of a value or variable. It returns a string indicating the type, such as "string", "number", "boolean", "undefined", etc.
+            </p>
+            <article class="card">
+                <h4>Example:</h4>
+                <pre class="code-block"><code>let age = 30;
+let name = "Anna";
+let isStudent = false;
+
+console.log(typeof age); // "number"
+console.log(typeof name); // "string"
+console.log(typeof isStudent); // "boolean"</code></pre>
+            </article>
+            <hr>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
+            <img class="footer-logo" src="../../../assets/icons/js-logo.svg" alt="JavaScript" width="28" height="28">
+            <div class="footer-social">
+                <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../../assets/icons/sprite.svg#icon-github"></use></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../../assets/icons/sprite.svg#icon-linkedin"></use></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* Page-specific styles for Variables > Types of Value.
+   Reset, header/footer, typography, and card shell live in ../../../assets/shared.css.
+   Only this page's real delta from that shared baseline lives here. */
+
+/* The "Null" card is the odd one out in the grid, so it spans full width
+   and stays centered instead of stretching edge to edge. */
+#null {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
+}

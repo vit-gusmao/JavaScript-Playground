@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/shared.css">
+    <title>Selectors</title>
+</head>
+<body class="theme-blue">
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="../index.html">
+                <img class="brand-logo" src="../../assets/icons/css-logo.svg" alt="" width="36" height="36">
+                <span class="brand-name">CSS</span>
+            </a>
+            <a class="nav-home" href="../../index.html">Home</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Selectors</h1>
+        <hr>
+        <section class="content-section">
+            <h2>Choosing which elements to style</h2>
+            <p>
+                A <span class="keyword">selector</span> targets one or more elements. You can select by element name, <span class="keyword">.class</span>, <span class="keyword">#id</span>, or combine selectors and pseudo-classes for more precision.
+            </p>
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Class &amp; id</h3>
+                    <p><span class="keyword">.class</span> can repeat, <span class="keyword">#id</span> is unique per page.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Combinators</h3>
+                    <p>
+                        <span class="keyword">&gt;</span> direct child, <span class="keyword">space</span> descendant, <span class="keyword">+</span> adjacent sibling.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Pseudo-classes</h3>
+                    <p>
+                        <span class="keyword">:hover</span>, <span class="keyword">:first-child</span> and <span class="keyword">:nth-child()</span> target states or positions.
+                    </p>
+                </article>
+            </div>
+            <article class="card">
+                <h3>Example:</h3>
+                <pre class="code-block"><code>.card {
+    background: #222;
+}
+
+#main-title {
+    font-size: 32px;
+}
+
+nav > a {
+    color: blue;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}</code></pre>
+            </article>
+            <hr>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2026 vit-gusmao. All rights reserved.</p>
+            <img class="footer-logo" src="../../assets/icons/css-logo.svg" alt="CSS" width="28" height="28">
+            <div class="footer-social">
+                <a href="https://github.com/vit-gusmao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-github"></use></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/vitor-gusmão-947a30340/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="icon" aria-hidden="true" width="18" height="18"><use href="../../assets/icons/sprite.svg#icon-linkedin"></use></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
