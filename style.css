@@ -1,131 +1,125 @@
-/* Page-specific styles for the JavaScript hub page.
-   Reset, header/footer, typography, and card shell live in ../assets/shared.css.
-   Only this page's real deltas from that shared baseline live here. */
+/* Hub page deltas. Shared reset, chrome, and card shell live in ./assets/shared.css. */
 
 h1 {
   margin-bottom: var(--space-sm);
 }
 
-p {
-  font-size: 16px;
-}
-
-.subtitle {
-  text-align: center;
-  color: var(--color-gray-light);
-  font-size: 25px;
+.page-lead {
   margin-bottom: var(--space-lg);
+  color: var(--color-text-muted);
+  font-size: 1.5625rem;
+  text-align: center;
 }
 
-.topic-link {
+.page-lead__accent {
+  color: var(--color-primary);
+}
+
+.card__link {
   display: block;
-  color: var(--color-white);
+  color: var(--color-text);
   text-decoration: none;
 }
 
-.topic-link h3 {
-  font-size: 20px;
+.card__link h3 {
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-yellow-primary);
-  margin-bottom: 4px;
 }
 
-.topic-link p {
+.card__link p {
   margin-bottom: 0;
-  font-size: 14px;
-  color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
 }
 
-.card-top {
+.card__top {
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
 
-.card-copy {
+.card__copy {
   flex: 1;
   min-width: 0;
 }
 
-.card-icon,
-.arrow-icon {
+.card__icon,
+.card__arrow {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  color: var(--color-yellow-primary);
+  color: var(--color-primary);
 }
 
-.card-icon {
-  width: 48px;
-  height: 48px;
+.card__icon {
+  width: var(--size-card-icon);
+  height: var(--size-card-icon);
   border-radius: 14px;
-  background-color: rgba(255, 215, 0, 0.12);
+  background-color: var(--color-primary-soft);
 }
 
-.card-icon svg {
-  width: 24px;
-  height: 24px;
+.card__icon svg {
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
 }
 
-.card-icon-fn {
-  font-family: var(--font-family-main);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1;
+.card__icon--fn {
+  font-family: var(--font-family);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.04em;
+  line-height: 1;
 }
 
-.arrow-icon {
-  width: 32px;
-  height: 32px;
+.card__arrow {
+  width: var(--size-arrow);
+  height: var(--size-arrow);
   margin-left: auto;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.06);
-  transition: transform var(--transition-normal), background-color var(--transition-normal);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-hover);
+  transition:
+    transform var(--transition-normal),
+    background-color var(--transition-normal);
 }
 
-.arrow-icon svg {
-  width: 16px;
-  height: 16px;
+.card__arrow svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
 }
 
-.topic-link:hover .arrow-icon {
+.card__link:hover .card__arrow {
+  background-color: var(--color-primary-soft);
   transform: translateX(3px);
-  background-color: rgba(255, 215, 0, 0.12);
 }
 
-.sub-links {
-  list-style: none;
-  margin-top: var(--space-sm);
-  margin-left: 60px;
+.card__sub-links {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-top: var(--space-sm);
+  margin-left: 60px;
+  list-style: none;
 }
 
-.sub-links li a {
-  color: var(--color-gray-light);
-  text-decoration: none;
-  font-size: 15px;
-  border-left: 3px solid var(--color-yellow-primary);
-  padding-left: var(--space-sm);
+.card__sub-links a {
   display: block;
+  padding-left: var(--space-sm);
+  border-left: 3px solid var(--color-primary);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
   transition: color var(--transition-normal);
 }
 
-.sub-links li a:hover {
-  color: var(--color-yellow-primary);
-}
-
-@media (min-width: 1024px) {
-  h2 { font-size: 28px; }
+.card__sub-links a:hover {
+  color: var(--color-primary);
 }
 
 @media (min-width: 1440px) {
-  .cards-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-span {
-  color: yellow;
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
