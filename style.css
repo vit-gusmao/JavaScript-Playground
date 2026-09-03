@@ -1,18 +1,66 @@
 /* Hub page deltas. Shared reset, chrome, and card shell live in ./assets/shared.css. */
 
-h1 {
-  margin-bottom: var(--space-sm);
-}
-
-.page-lead {
+.hub-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: var(--space-lg);
-  color: var(--color-text-muted);
-  font-size: 1.5625rem;
   text-align: center;
 }
 
-.page-lead__accent {
-  color: var(--color-primary);
+.hub-hero__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hub-hero__title {
+  margin-bottom: 0;
+  color: #f7df1e;
+  font-family: var(--font-family);
+  font-size: 68px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  filter: drop-shadow(0 0 28px rgb(247 223 30 / 40%));
+}
+
+.hero-shield {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 24px rgb(247 223 30 / 28%));
+}
+
+.hero-shield img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.hero-line {
+  width: min(300px, 80%);
+  height: 1px;
+  margin-top: 26px;
+  opacity: 0.7;
+  background: linear-gradient(90deg, transparent, #f7df1e, transparent);
+}
+
+.page-lead {
+  max-width: 620px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.page-lead .brand-name {
+  font-size: inherit;
+  font-weight: 600;
 }
 
 .card__link {
@@ -121,5 +169,21 @@ h1 {
 @media (min-width: 1440px) {
   .cards-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .hub-hero__top {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hub-hero__title {
+    font-size: 44px;
+  }
+
+  .hero-shield {
+    width: 84px;
+    height: 84px;
   }
 }
